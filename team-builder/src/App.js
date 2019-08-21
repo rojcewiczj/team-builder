@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Cards from "./MemberCard";
-import teamMemberForm from './Form';
+import TeamMemberForm from './Form';
 import team from "./TeamMembers"
 function App() {
   const [teamMembers, setTeamMembers] = useState(team);
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>My Team Members!</h1>
-      <teamMemberForm  addNewMember={addNewMember}/>
+      <TeamMemberForm  addNewMember={addNewMember}/>
       <Cards memberCard={teamMembers} />
     </div>
   );
