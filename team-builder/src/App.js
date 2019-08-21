@@ -9,18 +9,19 @@ function App() {
   const addNewMember = teamMember => {
     setTeamMembers([...teamMembers, teamMember]);
   }
-  const [membersToEdit, setMemberstoEdit]= useState(team)
+  const [membersToEdit, setMembersToEdit]= useState([])
   const editTeamMember = memberToEdit => {
-    setMemberstoEdit([...membersToEdit, memberToEdit]);
+    setMembersToEdit([...membersToEdit, memberToEdit]);
   }
 
   return (
     <div className="App">
       <h1>My Team Members!</h1>
-      <TeamMemberForm  addNewMember={addNewMember}/>
+      <TeamMemberForm  addNewMember={addNewMember}
+      />
       <div>
      
-      <Cards memberCard={teamMembers} editTeamMember={editTeamMember} />
+      <Cards memberCard={teamMembers}  editTeamMember={editTeamMember}  />
       </div>
     </div>
   );

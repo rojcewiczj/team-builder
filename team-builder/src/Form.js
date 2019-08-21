@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import App from './App';
 
 const TeamMemberForm = props => {
+  
     const [form, setForm] = useState({ name: '', email: '', role: ''});
     const changeHandler = event => {
         console.log(event.target.value);
@@ -16,6 +18,7 @@ const TeamMemberForm = props => {
         setForm({name: '', email:'', role: ''});
 
     };
+  
     return (
         <form onSubmit={submitMember}>
             <label htmlFor="name">Name</label>

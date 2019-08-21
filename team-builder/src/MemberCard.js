@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Cards = props => {
+
     console.log(props);
     return (
         <div className="member-card">
@@ -10,7 +11,9 @@ const Cards = props => {
                         <h1>{member.name}</h1>
                         <h3>{member.role}</h3>
                         <h5>{member.email}</h5>
+                        <form onSubmit={props.memberToEdit}>
                         <button type ="submit">{`Edit ${member.name}`}</button>
+                        </form>
                         </div>
                 );
             })}
