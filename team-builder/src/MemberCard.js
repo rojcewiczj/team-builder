@@ -10,6 +10,7 @@ const Cards = props => {
                         <h1>{member.name}</h1>
                         <h3>{member.role}</h3>
                         <h5>{member.email}</h5>
+                        <button type ="submit">{`Edit ${member.name}`}</button>
                         </div>
                 );
             })}
