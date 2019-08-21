@@ -51,8 +51,4 @@ const TeamMemberForm = props => {
     )
 }
 
-
-
-
-
 export default TeamMemberForm;
